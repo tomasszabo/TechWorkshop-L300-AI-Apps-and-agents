@@ -64,7 +64,8 @@ logger = logging.getLogger(__name__)
 thread_pool = ThreadPoolExecutor(max_workers=4)
 
 application_insights_connection_string = os.environ["APPLICATIONINSIGHTS_CONNECTION_STRING"]
-# configure_azure_monitor(connection_string=application_insights_connection_string)
+configure_azure_monitor(
+    connection_string=application_insights_connection_string, enable_performance_counters=False)
 OpenAIInstrumentor().instrument()
 
 scenario = os.path.basename(__file__)
