@@ -23,6 +23,8 @@ red_team_agent = RedTeam(
     num_objectives=5,
 )
 
+# Or use custom attack prompts
+
 # red_team_agent = RedTeam(
 #     azure_ai_project=azure_ai_project,
 #     credential=DefaultAzureCredential(),
